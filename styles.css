@@ -692,11 +692,6 @@ h4 {
     border-radius: 10px;
 }
 
-.footer{
-    flex-direction: column;
-    text-align: center;
-}
-
 .wrapper-background{
     background-color: #8B4513;
     height: 360px;
