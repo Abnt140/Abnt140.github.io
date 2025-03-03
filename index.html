@@ -15,238 +15,240 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="topbar">
-        <div class="left-section">
-            <img src="imagens\Logo.png" alt="Logo" class="logo">
-            <span class="site-name">Meso Amazônia</span>
-        </div>
-
-        <div class="middle-section">
-            <button class="nav-button" onclick="scrollToSection('Início')">Início</button>
-            <button class="nav-button" onclick="scrollToSection('Sobre')">Sobre</button>
-            <button class="nav-button"onclick="scrollToSection('Evolução Climática')">Evolução Climática</button>
-            <button class="nav-button" onclick="scrollToSection('Megafauna da Amazônia')">Megafauna da Amazônia</button>
-            <button class="nav-button" onclick="scrollToSection('Fósseis da Amazônia')">Fósseis da Amazônia</button>
-        </div>
-
-        <div class="right-section">
-            <input type="text" placeholder="Search..." class="search-bar">
-            <button class="search-button">Search</button>
-        </div>
-    </div>
-
-    <div class="banner-container">
-        <div class="banner">
-            <div class="slides">
-                <img src="imagens/Banner.jpg" alt="Banner 1" class="slide active">
-                <img src="imagens/Banner2.jpg" alt="Banner 2" class="slide">
-                <img src="imagens/Banner3.jpg" alt="Banner 3" class="slide">
-                <img src="imagens/Banner4.jpg" alt="Banner 4" class="slide">
+    <div class="container">
+        <div class="topbar">
+            <div class="left-section">
+                <img src="imagens\Logo.png" alt="Logo" class="logo">
+                <span class="site-name">Meso Amazônia</span>
             </div>
-            <button class="arrow left-arrow" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="arrow right-arrow" onclick="moveSlide(1)">&#10095;</button>
-            <div class="dots-container">
-                <span class="dot active" onclick="goToSlide(0)"></span>
-                <span class="dot" onclick="goToSlide(1)"></span>
-                <span class="dot" onclick="goToSlide(2)"></span>
-                <span class="dot" onclick="goToSlide(3)"></span>
+    
+            <div class="middle-section">
+                <button class="nav-button" onclick="scrollToSection('Início')">Início</button>
+                <button class="nav-button" onclick="scrollToSection('Sobre')">Sobre</button>
+                <button class="nav-button"onclick="scrollToSection('Evolução Climática')">Evolução Climática</button>
+                <button class="nav-button" onclick="scrollToSection('Megafauna da Amazônia')">Megafauna da Amazônia</button>
+                <button class="nav-button" onclick="scrollToSection('Fósseis da Amazônia')">Fósseis da Amazônia</button>
+            </div>
+    
+            <div class="right-section">
+                <input type="text" placeholder="Search..." class="search-bar">
+                <button class="search-button">Search</button>
             </div>
         </div>
-    </div>
-
-    <div class="textboxes-section">
-        <div class="textbox">
-            <span class="material-symbols-outlined">
-                warning
-            </span>
-            <h3>Fauna</h3>
-            <p>A Amazônia abrigava dinossauros, crocodilianos gigantes e outras criaturas pré-históricas.</p>
-        </div>
-        <div class="textbox">
-            <span class="material-symbols-outlined">
-                forest
-            </span>
-            <h3>Flora</h3>
-            <p>Florestas exuberantes de coníferas e samambaias dominavam a paisagem.</p>
-        </div>
-        <div class="textbox">
-            <span class="material-symbols-outlined">
-                cloud_alert
-            </span>
-            <h3>Clima</h3>
-            <p>Clima quente e úmido, ideal para o desenvolvimento de uma biodiversidade única.</p>
-        </div>
-    </div>
-
-    <div class="introduction-text" id="Sobre">
-        <div class="text-content">
-            <div class="text-title">
-                <h2>
-                    <strong>Sobre</strong>
-                </h2>
-            </div>
-            <p>Este site foi criado para explorar a fascinante história da Amazônia Mesozoica, revelando os incríveis animais e plantas que habitaram a região há milhões de anos. Durante o período dos dinossauros, a Amazônia era um ambiente muito diferente do que conhecemos hoje, repleto de répteis gigantes, florestas primitivas e ecossistemas em constante transformação.
-                <br>
-                Além de apresentar esses seres extintos, também explicamos como eventos como o impacto do meteoro há 66 milhões de anos influenciaram a formação da Floresta Amazônica moderna, um dos ecossistemas mais ricos e biodiversos do planeta. Através de mapas interativos, gráficos e conteúdos educativos, nosso objetivo é levar você a uma viagem pelo passado da Amazônia e mostrar como ele moldou o presente.
-                <br>
-                Explore e descubra a pré-história da maior floresta tropical do mundo!</p>
-        </div>
-        <div class="gif-container">
-            <img src="imagens\dino.gif" alt="GIF explicativo">
-        </div>
-    </div>
-
-    <div id="card-area">
-		<div class="wrapper1">
-			<div class="box-area">
-				<div class="box">
-					<img alt="" src="imagens\Carrossel1.png">
-					<div class="overlay">
-						<h3>Dinossauro Amazônico</h3>
-						<p>Oxalaia quilombensis: o maior dinossauro carnívoro já descoberto no Brasil. Viveu no período Cretáceo e possuía características adaptadas a um ambiente aquático.</p>
-					</div>
-				</div>
-				<div class="box">
-					<img alt="" src="imagens\Carrossel2.png">
-					<div class="overlay">
-						<h3>Cráton Amazônico</h3>
-						<p>O Cráton Amazônico, uma das formações geológicas mais antigas do planeta, guarda em suas rochas vestígios da história da Terra há mais de 2,5 bilhões de anos, sendo a base estrutural da Amazônia pré-histórica.</p>
-					</div>
-				</div>
-				<div class="box">
-					<img alt="" src="imagens\Carrossel3.jpg">
-					<div class="overlay">
-						<h3>Formação da Floresta Amazônica</h3>
-						<p>O impacto do meteoro há 66 milhões de anos transformou a paisagem da América do Sul, abrindo espaço para novas vegetações. Esse processo levou, ao longo de milhões de anos, à formação da Floresta Amazônica.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-    <div class="graph-container">
-        <div class="graph-title" id="Evolução Climática">
-            <h2><strong>Evolução Climática</strong></h2>
-        </div>
-        <div class="class-container">
-            <div class="class-chart">
-                <canvas id="barchart" width="400" height="400"></canvas>
-            </div>
-            <div class="graph-text">
-                <p>
-                    Este gráfico ilustra a evolução da temperatura média na região da Amazônia ao longo dos períodos geológicos do Mesozoico, abrangendo os períodos Triássico, Jurássico e Cretáceo. Durante esse tempo, a região era caracterizada por um clima quente e úmido, ideal para o desenvolvimento de uma rica fauna e flora.
-                    <br><br>
-                    <strong>Triássico (250-201 milhões de anos atrás)</strong> <br> Temperatura média: 30°C <br> Eventos marcantes: Surgimento dos primeiros dinossauros, beneficiados pelo clima quente e estável.
-                    <br><br>
-                    <strong>Jurássico (201-145 milhões de anos atrás)</strong> <br> Temperatura média: 28°C <br> Eventos marcantes: Grande diversificação dos dinossauros, com o aparecimento de herbívoros gigantes e predadores ferozes.
-                    <br><br>
-                    <strong>Cretáceo (145-66 milhões de anos atrás)</strong> <br> Temperatura média: 32°C <br> Eventos marcantes: Expansão das florestas tropicais e presença de dinossauros de grande porte. No final do período, um impacto de asteroide causou a extinção em massa de várias espécies.
-                    <br><br>
-                    As mudanças climáticas e ambientais ao longo desses períodos foram cruciais para a evolução dos dinossauros e o desenvolvimento da flora amazônica, que continua a ser um dos ecossistemas mais biodiversos do planeta.
-                </p>
+    
+        <div class="banner-container">
+            <div class="banner">
+                <div class="slides">
+                    <img src="imagens/Banner.jpg" alt="Banner 1" class="slide active">
+                    <img src="imagens/Banner2.jpg" alt="Banner 2" class="slide">
+                    <img src="imagens/Banner3.jpg" alt="Banner 3" class="slide">
+                    <img src="imagens/Banner4.jpg" alt="Banner 4" class="slide">
+                </div>
+                <button class="arrow left-arrow" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="arrow right-arrow" onclick="moveSlide(1)">&#10095;</button>
+                <div class="dots-container">
+                    <span class="dot active" onclick="goToSlide(0)"></span>
+                    <span class="dot" onclick="goToSlide(1)"></span>
+                    <span class="dot" onclick="goToSlide(2)"></span>
+                    <span class="dot" onclick="goToSlide(3)"></span>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="carousel-title" id="Megafauna da Amazônia">
-        <h2><strong>Megafauna da Amazônia</strong></h2>
-    </div>
-
-    <div class="wrapper-background">
-        <div class="wrapper">
-            <i id="left" class="fa-solid fa-angle-left">
+    
+        <div class="textboxes-section">
+            <div class="textbox">
                 <span class="material-symbols-outlined">
-                arrow_back
+                    warning
                 </span>
-            </i>
-            <ul class="carousel">
-                <li class="card">
-                    <div class="img"><img src="imagens\Carrossel7.jpg" alt="img" draggable="false"></div>
-                    <h2>Purussaurus brasiliensis</h2>
-                    <span>Um dos maiores crocodilianos de todos os tempos.</span>
-                </li>
-                <li class="card">
-                    <div class="img"><img src="imagens\Carrossel8.jpeg" alt="img" draggable="false"></div>
-                    <h2>Amazonsaurus maranhensis</h2>
-                    <span>Primeiro dinossauro descoberto na região.</span>
-                </li>
-                <li class="card">
-                    <div class="img"><img src="imagens\Carrossel9.jpeg" alt="img" draggable="false"></div>
-                    <h2>Oxalaia quilombensis</h2>
-                    <span>Maior espinossaurídeo do Brasil.</span>
-                </li>
-                <li class="card">
-                    <div class="img"><img src="imagens\Carrossel10.jpg" alt="img" draggable="false"></div>
-                    <h2>Pycnonemosaurus nevesi</h2>
-                    <span>Um dos maiores terópodes do Brasil.</span>
-                </li>
-                <li class="card">
-                    <div class="img"><img src="imagens\Carrossel11.jpg" alt="img" draggable="false"></div>
-                    <h2>Glyptodontinae</h2>
-                    <span>Parentes gigantes dos tatus modernos.</span>
-                </li>
-                <li class="card">
-                    <div class="img"><img src="imagens\Carrossel12.jpg" alt="img" draggable="false"></div>
-                    <h2>Eremotherium laurillardi</h2>
-                    <span>Uma das maiores preguiças terrestres.</span>
-                </li>
-            </ul>
-            <i id="right" class="fa-solid fa-angle-right">
+                <h3>Fauna</h3>
+                <p>A Amazônia abrigava dinossauros, crocodilianos gigantes e outras criaturas pré-históricas.</p>
+            </div>
+            <div class="textbox">
                 <span class="material-symbols-outlined">
-                arrow_forward
+                    forest
                 </span>
-            </i>
+                <h3>Flora</h3>
+                <p>Florestas exuberantes de coníferas e samambaias dominavam a paisagem.</p>
+            </div>
+            <div class="textbox">
+                <span class="material-symbols-outlined">
+                    cloud_alert
+                </span>
+                <h3>Clima</h3>
+                <p>Clima quente e úmido, ideal para o desenvolvimento de uma biodiversidade única.</p>
+            </div>
         </div>
-    </div>
-
-    <div class="map-title" id="Fósseis da Amazônia">
-        <h2><strong>Fósseis da Amazônia</strong></h2>
-    </div>
-    <br><br>
-    <div id="map"></div>
-
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script>
-        var map = L.map('map').setView([-3.4653, -62.2159], 4);
     
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-    
-        var fosseis = [
-            { nome: "Purussaurus brasiliensis", local: "Acre", coordenadas: [-9.9737, -67.812] },
-            { nome: "Amazonsaurus maranhensis", local: "Maranhão", coordenadas: [-5.042, -45.000] },
-            { nome: "Oxalaia quilombensis", local: "Pará", coordenadas: [-1.444, -51.147] },
-            { nome: "Pycnonemosaurus nevesi", local: "Mato Grosso", coordenadas: [-15.5989, -56.0949] },
-            { nome: "Glyptodontinae", local: "Rondônia", coordenadas: [-10.829, -62.333] },
-            { nome: "Eremotherium laurillardi", local: "Amazonas", coordenadas: [-3.4653, -65.262] }
-        ];
-    
-        fosseis.forEach(fossil => {
-            var marker = L.marker(fossil.coordenadas).addTo(map);
-            marker.bindPopup(`<b>${fossil.nome}</b><br>${fossil.local}`);
-        });
-    </script>
-
-    <br>
-    <h4>Este mapa mostra o local onde foram descobertos os fósseis dos animais mostrados acima. <br> Clique em uma das marcações para saber o animal e o estado onde foi encontrado.</h4>
-
-    <div class="newsletter-section">
-        <h2>Explore o passado da Amazônia!</h2>
-        <p>Inscreva-se para receber novidades.</p>
-        <form class="newsletter-form">
-            <input type="email" placeholder="Escreva seu email" required>
-            <button type="submit">Confirmar</button>
-        </form>
-        <img src="imagens\Logo.png" alt="Logo">
-    </div>
-
-    <footer class="footer">
-        <div class="left-section">
-            <img src="imagens\Logo.png" alt="Logo" class="logo">
-            <span class="site-name">Meso Amazônia</span>
+        <div class="introduction-text" id="Sobre">
+            <div class="text-content">
+                <div class="text-title">
+                    <h2>
+                        <strong>Sobre</strong>
+                    </h2>
+                </div>
+                <p>Este site foi criado para explorar a fascinante história da Amazônia Mesozoica, revelando os incríveis animais e plantas que habitaram a região há milhões de anos. Durante o período dos dinossauros, a Amazônia era um ambiente muito diferente do que conhecemos hoje, repleto de répteis gigantes, florestas primitivas e ecossistemas em constante transformação.
+                    <br>
+                    Além de apresentar esses seres extintos, também explicamos como eventos como o impacto do meteoro há 66 milhões de anos influenciaram a formação da Floresta Amazônica moderna, um dos ecossistemas mais ricos e biodiversos do planeta. Através de mapas interativos, gráficos e conteúdos educativos, nosso objetivo é levar você a uma viagem pelo passado da Amazônia e mostrar como ele moldou o presente.
+                    <br>
+                    Explore e descubra a pré-história da maior floresta tropical do mundo!</p>
+            </div>
+            <div class="gif-container">
+                <img src="imagens\dino.gif" alt="GIF explicativo">
+            </div>
         </div>
-    </footer>
+    
+        <div id="card-area">
+            <div class="wrapper1">
+                <div class="box-area">
+                    <div class="box">
+                        <img alt="" src="imagens\Carrossel1.png">
+                        <div class="overlay">
+                            <h3>Dinossauro Amazônico</h3>
+                            <p>Oxalaia quilombensis: o maior dinossauro carnívoro já descoberto no Brasil. Viveu no período Cretáceo e possuía características adaptadas a um ambiente aquático.</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <img alt="" src="imagens\Carrossel2.png">
+                        <div class="overlay">
+                            <h3>Cráton Amazônico</h3>
+                            <p>O Cráton Amazônico, uma das formações geológicas mais antigas do planeta, guarda em suas rochas vestígios da história da Terra há mais de 2,5 bilhões de anos, sendo a base estrutural da Amazônia pré-histórica.</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <img alt="" src="imagens\Carrossel3.jpg">
+                        <div class="overlay">
+                            <h3>Formação da Floresta Amazônica</h3>
+                            <p>O impacto do meteoro há 66 milhões de anos transformou a paisagem da América do Sul, abrindo espaço para novas vegetações. Esse processo levou, ao longo de milhões de anos, à formação da Floresta Amazônica.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="graph-container">
+            <div class="graph-title" id="Evolução Climática">
+                <h2><strong>Evolução Climática</strong></h2>
+            </div>
+            <div class="class-container">
+                <div class="class-chart">
+                    <canvas id="barchart" width="400" height="400"></canvas>
+                </div>
+                <div class="graph-text">
+                    <p>
+                        Este gráfico ilustra a evolução da temperatura média na região da Amazônia ao longo dos períodos geológicos do Mesozoico, abrangendo os períodos Triássico, Jurássico e Cretáceo. Durante esse tempo, a região era caracterizada por um clima quente e úmido, ideal para o desenvolvimento de uma rica fauna e flora.
+                        <br><br>
+                        <strong>Triássico (250-201 milhões de anos atrás)</strong> <br> Temperatura média: 30°C <br> Eventos marcantes: Surgimento dos primeiros dinossauros, beneficiados pelo clima quente e estável.
+                        <br><br>
+                        <strong>Jurássico (201-145 milhões de anos atrás)</strong> <br> Temperatura média: 28°C <br> Eventos marcantes: Grande diversificação dos dinossauros, com o aparecimento de herbívoros gigantes e predadores ferozes.
+                        <br><br>
+                        <strong>Cretáceo (145-66 milhões de anos atrás)</strong> <br> Temperatura média: 32°C <br> Eventos marcantes: Expansão das florestas tropicais e presença de dinossauros de grande porte. No final do período, um impacto de asteroide causou a extinção em massa de várias espécies.
+                        <br><br>
+                        As mudanças climáticas e ambientais ao longo desses períodos foram cruciais para a evolução dos dinossauros e o desenvolvimento da flora amazônica, que continua a ser um dos ecossistemas mais biodiversos do planeta.
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="carousel-title" id="Megafauna da Amazônia">
+            <h2><strong>Megafauna da Amazônia</strong></h2>
+        </div>
+    
+        <div class="wrapper-background">
+            <div class="wrapper">
+                <i id="left" class="fa-solid fa-angle-left">
+                    <span class="material-symbols-outlined">
+                    arrow_back
+                    </span>
+                </i>
+                <ul class="carousel">
+                    <li class="card">
+                        <div class="img"><img src="imagens\Carrossel7.jpg" alt="img" draggable="false"></div>
+                        <h2>Purussaurus brasiliensis</h2>
+                        <span>Um dos maiores crocodilianos de todos os tempos.</span>
+                    </li>
+                    <li class="card">
+                        <div class="img"><img src="imagens\Carrossel8.jpeg" alt="img" draggable="false"></div>
+                        <h2>Amazonsaurus maranhensis</h2>
+                        <span>Primeiro dinossauro descoberto na região.</span>
+                    </li>
+                    <li class="card">
+                        <div class="img"><img src="imagens\Carrossel9.jpeg" alt="img" draggable="false"></div>
+                        <h2>Oxalaia quilombensis</h2>
+                        <span>Maior espinossaurídeo do Brasil.</span>
+                    </li>
+                    <li class="card">
+                        <div class="img"><img src="imagens\Carrossel10.jpg" alt="img" draggable="false"></div>
+                        <h2>Pycnonemosaurus nevesi</h2>
+                        <span>Um dos maiores terópodes do Brasil.</span>
+                    </li>
+                    <li class="card">
+                        <div class="img"><img src="imagens\Carrossel11.jpg" alt="img" draggable="false"></div>
+                        <h2>Glyptodontinae</h2>
+                        <span>Parentes gigantes dos tatus modernos.</span>
+                    </li>
+                    <li class="card">
+                        <div class="img"><img src="imagens\Carrossel12.jpg" alt="img" draggable="false"></div>
+                        <h2>Eremotherium laurillardi</h2>
+                        <span>Uma das maiores preguiças terrestres.</span>
+                    </li>
+                </ul>
+                <i id="right" class="fa-solid fa-angle-right">
+                    <span class="material-symbols-outlined">
+                    arrow_forward
+                    </span>
+                </i>
+            </div>
+        </div>
+    
+        <div class="map-title" id="Fósseis da Amazônia">
+            <h2><strong>Fósseis da Amazônia</strong></h2>
+        </div>
+        <br><br>
+        <div id="map"></div>
+    
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script>
+            var map = L.map('map').setView([-3.4653, -62.2159], 4);
+        
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+        
+            var fosseis = [
+                { nome: "Purussaurus brasiliensis", local: "Acre", coordenadas: [-9.9737, -67.812] },
+                { nome: "Amazonsaurus maranhensis", local: "Maranhão", coordenadas: [-5.042, -45.000] },
+                { nome: "Oxalaia quilombensis", local: "Pará", coordenadas: [-1.444, -51.147] },
+                { nome: "Pycnonemosaurus nevesi", local: "Mato Grosso", coordenadas: [-15.5989, -56.0949] },
+                { nome: "Glyptodontinae", local: "Rondônia", coordenadas: [-10.829, -62.333] },
+                { nome: "Eremotherium laurillardi", local: "Amazonas", coordenadas: [-3.4653, -65.262] }
+            ];
+        
+            fosseis.forEach(fossil => {
+                var marker = L.marker(fossil.coordenadas).addTo(map);
+                marker.bindPopup(`<b>${fossil.nome}</b><br>${fossil.local}`);
+            });
+        </script>
+    
+        <br>
+        <h4>Este mapa mostra o local onde foram descobertos os fósseis dos animais mostrados acima. <br> Clique em uma das marcações para saber o animal e o estado onde foi encontrado.</h4>
+    
+        <div class="newsletter-section">
+            <h2>Explore o passado da Amazônia!</h2>
+            <p>Inscreva-se para receber novidades.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Escreva seu email" required>
+                <button type="submit">Confirmar</button>
+            </form>
+            <img src="imagens\Logo.png" alt="Logo">
+        </div>
+    
+        <footer class="footer">
+            <div class="left-section">
+                <img src="imagens\Logo.png" alt="Logo" class="logo">
+                <span class="site-name">Meso Amazônia</span>
+            </div>
+        </footer>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="chart.js"></script>

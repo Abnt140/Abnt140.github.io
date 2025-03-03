@@ -14,6 +14,19 @@
 
 body{
     background-color: #f1f1f1;
+    font-size: 16px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .topbar,
@@ -256,6 +269,16 @@ body{
     margin-top: 2px;
 }
 
+.carousel{
+    grid-auto-columns: calc((100% / 3) - 12px);
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        grid-auto-columns: calc(100% - 20px);
+    }
+}
+
 .wrapper .carousel {
     max-height: fit-content;
     width: 100%;
@@ -375,6 +398,7 @@ body{
     display: flex;
     justify-content: center;
     gap: 10px;
+    flex-direction: row;
 }
 
 .newsletter-form input {
@@ -383,6 +407,7 @@ body{
     border-radius: 5px;
     width: 300px;
     font-size: 16px;
+    margin-bottom: 10px;
 }
 
 .newsletter-form button {
@@ -427,13 +452,16 @@ body{
 .graph-container {
     display: flex;
     flex-direction: column;
-    max-width: fit-content;
-    margin: 20px;
-    text-align: left;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    padding-left: 10px;
 }
 
 .graph-text {
-    max-width: 600px; 
+    flex: 1;
+    max-width: 50%; 
     word-break: break-word;
     word-wrap: break-word; 
     overflow-wrap: break-word;
@@ -458,9 +486,10 @@ body{
 
 .class-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    gap: 50px; 
+    gap: 40px; 
     width: 100%;
 }
 
@@ -476,9 +505,10 @@ body{
 }
 
 #map {
-    justify-self: center;
     height: 400px;
-    width: 75%;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
 }
 
 .map-name {
@@ -606,14 +636,16 @@ h4 {
 
 .introduction-text {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-top: 0;
     background: linear-gradient(to bottom, #f5e6ca, #f1f1f1);
     max-width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px;
     text-align: left;
+    gap: 40px;
 }
 
 .text-content {
@@ -621,6 +653,16 @@ h4 {
     max-width: 60%;
     margin-left: 30px;
     text-align: center;
+}
+
+.gif-container {
+    flex: 1;
+    max-width: 40%;
+}
+
+.gif-container img{
+    max-width: 100%;
+    height: auto;
 }
 
 .text-title{
@@ -650,8 +692,9 @@ h4 {
     border-radius: 10px;
 }
 
-footer{
-    margin-top: 0;
+.footer{
+    flex-direction: column;
+    text-align: center;
 }
 
 .wrapper-background{
@@ -660,58 +703,38 @@ footer{
 }
 
 @media (max-width: 768px) {
-    /* Corrigindo títulos largos */
-    .graph-title, .map-title, .carousel-title {
-        max-width: 90%;
-        text-align: center;
-        margin: 0 auto;
+    body {
+        font-size: 14px;
     }
 
-    /* Garantindo que o texto não estique a tela */
-    .graph-text {
-        max-width: 90%; /* Limita a largura */
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        text-align: justify;
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .container {
         padding: 10px;
-        margin: 0 auto; /* Centraliza o conteúdo */
     }
 
-    /* Ajustando a seção de caixas de texto */
-    .textboxes-section {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .textboxes-section .textbox {
-        width: 90%;
-    }
-
-    /* Melhorando responsividade do carrossel */
-    .carousel {
-        grid-auto-columns: calc(100% - 20px);
-    }
-
-    /* Ajustando a navegação */
     .topbar {
         flex-direction: column;
         align-items: center;
         padding: 10px;
     }
 
-    /* Reduzindo o tamanho da logo */
     .logo {
         height: 40px;
         margin-right: 5px;
     }
 
-    /* Centralizando o nome do site */
     .site-name {
         font-size: 20px;
         text-align: center;
     }
 
-    /* Ajustando os botões do menu */
     .middle-section {
         flex-direction: column;
         gap: 5px;
@@ -719,14 +742,20 @@ footer{
     }
 
     .nav-button {
-        width: 90%;
-        text-align: center;
+        width: 100%;
         font-size: 15px;
+        padding: 8px 10px;
     }
 
-    /* Fazendo a barra de pesquisa se ajustar à tela */
+    .right-section {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 5px;
+    }
+
     .search-bar {
-        width: 80%;
+        width: 90%;
         max-width: 300px;
         padding: 8px;
     }
@@ -735,25 +764,102 @@ footer{
         padding: 8px 10px;
     }
 
-    /* Ajustando a seção da direita para não esticar */
-    .right-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        gap: 5px;
+    .banner-container {
+        height: 30vh;
     }
 
-    .class-container {
-        flex-direction: column; /* Empilha os elementos no mobile */
+    .arrow {
+        padding: 5px;
+        font-size: 18px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .textboxes-section {
+        flex-direction: column;
         align-items: center;
-        gap: 20px; /* Adiciona um espaçamento entre os elementos */
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .textboxes-section .textbox {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .introduction-text {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .text-content, .gif-container {
+        max-width: 100%;
+    }
+
+    .gif-container img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .carousel {
+        grid-auto-columns: 100%;
+    }
+
+    .wrapper i {
+        font-size: 1rem;
+        width: 40px;
+        height: 40px;
+    }
+
+    .graph-container {
+        flex-direction: column;
     }
 
     .class-chart {
         max-width: 100%;
-        width: 90%;
         padding: 10px;
     }
 
+    #map {
+        height: 300px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+    }
+
+    .newsletter-form button {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .box-area {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .overlay h3 {
+        font-size: 20px;
+    }
 }
